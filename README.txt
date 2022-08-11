@@ -9,6 +9,21 @@ Please note that the version on Github is a development (or
 experimental) version: please download it for testing new features.
 The production version is the one on CTAN and ACM sites.
 
+No copyrights intended. All rights are reserved by ACM.
+
+Unofficial changes:
+
+I have prepared this repository to submit paper for review in ACM conferences.  To that end, I have moved the sections
+form the [sample-sigconf.tex](./sample-sigconf.tex) file to sections in the
+[acm-template-section](./sections/acm-template-sections/). I have also made some changes to make the generation of PDF
+ready for review submission by changing document class, and few more stuff.
+
+I have also added few possible sections used in academic conferences in [sections](./sections/). Add content to the
+appropriate sections files under [sections](./sections/) and change the imported .tex files in
+[sample-sigconf.tex](./sample-sigconf.tex) and you are good to go. You can upload this entire directory to Overleaf or
+compile on your machine using command `make` to create the output [sample-sigconf.pdf](./sample-sigconf.pdf).
+
+Official changes are below.
 
 Changes
 
