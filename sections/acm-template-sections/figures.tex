@@ -1,0 +1,81 @@
+\section{Figures}
+
+The ``\verb|figure|'' environment should be used for figures. One or
+more images can be placed within a figure. If your figure contains
+third-party material, you must clearly identify it as such, as shown
+in the example below.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{sections/acm-template-sections/images/sample-franklin}
+  \caption{1907 Franklin Model D roadster. Photograph by Harris \&
+    Ewing, Inc. [Public domain], via Wikimedia
+    Commons. (\url{https://goo.gl/VLCRBB}).}
+  \Description{A woman and a girl in white dresses sit in an open car.}
+\end{figure}
+
+Your figures should contain a caption which describes the figure to
+the reader.
+
+Figure captions are placed {\itshape below} the figure.
+
+Every figure should also have a figure description unless it is purely
+decorative. These descriptions convey what’s in the image to someone
+who cannot see it. They are also used by search engine crawlers for
+indexing images, and when images cannot be loaded.
+
+A figure description must be unformatted plain text less than 2000
+characters long (including spaces).  {\bfseries Figure descriptions
+  should not repeat the figure caption – their purpose is to capture
+  important information that is not already provided in the caption or
+  the main text of the paper.} For figures that convey important and
+complex new information, a short text description may not be
+adequate. More complex alternative descriptions can be placed in an
+appendix and referenced in a short figure description. For example,
+provide a data table capturing the information in a bar chart, or a
+structured list representing a graph.  For additional information
+regarding how best to write figure descriptions and why doing this is
+so important, please see
+\url{https://www.acm.org/publications/taps/describing-figures/}.
+
+\subsection{Figures showing how to crop and position} 
+
+Here is original figure fitted to \verb|width=linewidth| and \verb|scaled| to 0.50, without any crop in the Figure \ref{fig:diffie-hellman-illus}.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\linewidth,scale=0.50]{sections/acm-template-sections/images/Diffie-Hellman_Key_Exchange.svg.png}
+    \caption{Illustration of Diffie-Hellman key exchange. (\url{https://upload.wikimedia.org/wikipedia/commons/4/46/Diffie-Hellman_Key_Exchange.svg})}
+    \label{fig:diffie-hellman-illus}
+\end{figure}
+
+To crop image use \verb|trim={0 0 0 0.5cm},clip| where trim length are mentioned by sides mentioned as \textit{left, bottom, right, top} respectively to \verb|trim|, and \verb|clip| activates clipping. See the figure \ref{fig:diffie-hellman-illus-2}. Here environment \begin{verbatim}
+    \begin{figure}[floats here]
+    \end{figure}
+\end{verbatim}
+is used instead of
+\begin{verbatim}
+    \begin{figure*}[floats here]
+    \end{figure*}
+\end{verbatim}. To read more about floats \href{https://www.overleaf.com/learn/latex/Errors/\%60!h\%27_float_specifier_changed_to_\%60!ht\%27}{see}. 
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\linewidth,trim={0 0.5 0 0.5cm},clip,scale=0.50]{sections/acm-template-sections/images/Diffie-Hellman_Key_Exchange.svg.png}
+    \caption{Illustration of Diffie-Hellman key exchange with clipped image from top and bottom. (\url{https://upload.wikimedia.org/wikipedia/commons/4/46/Diffie-Hellman_Key_Exchange.svg})}
+    \label{fig:diffie-hellman-illus-2}
+\end{figure}
+
+
+\subsection{The ``Teaser Figure''}
+
+A ``teaser figure'' is an image, or set of images in one figure, that
+are placed after all author and affiliation information, and before
+the body of the article, spanning the page. If you wish to have such a
+figure in your article, place the command immediately before the
+\verb|\maketitle| command:
+\begin{verbatim}
+  \begin{teaserfigure}
+    \includegraphics[width=\textwidth]{sampleteaser}
+    \caption{figure caption}
+    \Description{figure description}
+  \end{teaserfigure}
+\end{verbatim}
