@@ -9,7 +9,7 @@ Please note that the version on Github is a development (or
 experimental) version: please download it for testing new features.
 The production version is the one on CTAN and ACM sites.
 
-No copyrights intended. All rights are reserved by ACM.
+**No copyrights intended. All rights are reserved by ACM.**
 
 Unofficial changes:
 
